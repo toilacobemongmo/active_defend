@@ -1,0 +1,27 @@
+services:
+  soc-core:
+    build: .
+    container_name: soc_active_defense_core
+    cap_add:
+      - NET_ADMIN  # Cho phep SOAR quan ly iptables
+    ports:
+      - "2222:2222" # SSH Honeypot
+      - "8080:8080" # Canary Webhook
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    restart: unless-stopped
+    command: python main.py
+
+  soc-dashboard:
+    build: .
+    container_name: soc_active_defense_dashboard
+    ports:
+      - "127.0.0.1:8501:8501" # Streamlit Dashboard (chi bind loopback, khong phoi ra LAN)
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    restart: unless-stopped
+    command: streamlit run scripts/dashboard.py --server.port=8501 --server.address=0.0.0.0

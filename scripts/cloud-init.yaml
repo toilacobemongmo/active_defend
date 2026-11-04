@@ -1,0 +1,58 @@
+#cloud-config
+# ==============================================================================
+# Cloud-init cho Oracle Cloud Always Free - SOC Honeynet Active Defense
+#
+# Dan vao: Create instance -> Management -> Initialization script -> Paste
+#          cloud-init script
+#
+# Sau khi VM boot xong (~2-3 phut), chi can:
+#   git clone <repo> && cd soc-honeynet-active-defense
+#   sudo bash scripts/deploy_oci.sh
+#
+# Script nay KHONG cai Docker (deo lam cham boot, va deploy_oci.sh lo roi).
+# No chi lo 2 viec ma nguoi moi hay quen nhat:
+#   1. Mo port o firewall cua OS (khac hoan toan Security List cua OCI)
+#   2. Cai san git + curl + cac goi can thiet
+# ==============================================================================
+
+package_update: true
+package_upgrade: false
+
+packages:
+  - git
+  - curl
+  - ca-certificates
+  - net-tools
+  - iptables-persistent
+
+write_files:
+  - path: /usr/local/bin/open-honeypot-ports.sh
+    permissions: '0755'
+    content: |
+      #!/usr/bin/env bash
+      set -euo pipefail
+
+      # Mo port cho honeypot (2222) va canary webhook (8080).
+      # OCI: mo Ingress o Security List la CHUA DU voi image Ubuntu/Oracle Linux,
+      # vi firewall cua OS van chan. Thieu buoc nay -> tu ngoai timeout
+      # trong khi `ss -lntp` van thay port dang listen.
+      for p in 2222 8080; do
+          iptables -C INPUT -p tcp --dport "$p" -j ACCEPT 2>/dev/null \
+              || iptables -I INPUT 1 -p tcp --dport "$p" -j ACCEPT
+      done
+      mkdir -p /etc/iptables
+      iptables-save > /etc/iptables/rules.v4
+
+      # Oracle Linux dung firewalld
+      if command -v firewall-cmd >/dev/null 2>&1 && firewall-cmd --state >/dev/null 2>&1; then
+          firewall-cmd --permanent --add-port=2222/tcp
+          firewall-cmd --permanent --add-port=8080/tcp
+          firewall-cmd --reload
+      fi
+
+      echo "[cloud-init] Da mo port 2222 + 8080" > /var/log/open-honeypot-ports.log
+
+runcmd:
+  - [bash, -lc, "/usr/local/bin/open-honeypot-ports.sh"]
+
+final_message: "Cloud-init xong sau $UPTIME giay. Tiep: git clone repo && sudo bash scripts/deploy_oci.sh"

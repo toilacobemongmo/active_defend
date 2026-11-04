@@ -1,0 +1,91 @@
+# Cấu hình Hệ thống Active Defense & SOAR Honeynet
+system:
+  name: "Mini-SOC Active Defense & Deception Framework"
+  version: "2.1.0"
+  environment: "production" # hoặc "development"
+  log_level: "INFO"
+
+# Đường dẫn dữ liệu Cowrie
+cowrie:
+  log_path: "./data/cowrie.json"          # Hoặc /var/log/cowrie/cowrie.json trên Linux
+  downloads_path: "./data/downloads"       # Thư mục lưu malware do hacker drop vào
+  custom_fs_path: "./data/fs.pickle"
+
+# Cấu hình Telegram SOAR Bot (Tương tác 2 chiều)
+telegram:
+  enabled: true
+  bot_token: ""    # Điền token của bạn hoặc cấu hình qua TELEGRAM_BOT_TOKEN trong .env
+  chat_id: ""      # Điền chat ID hoặc cấu hình qua TELEGRAM_CHAT_ID trong .env
+  poll_interval_sec: 2
+
+# Tích hợp Threat Intelligence (Trinh sát ngược)
+threat_intel:
+  abuseipdb:
+    enabled: true
+    api_key: ""    # Hoặc ABUSEIPDB_API_KEY trong .env
+    confidence_threshold: 40            
+  shodan:
+    enabled: true
+    api_key: ""    # Hoặc SHODAN_API_KEY trong .env
+  virustotal:
+    enabled: true
+    api_key: ""    # Hoặc VIRUSTOTAL_API_KEY trong .env
+  reverse_nmap:
+    enabled: true
+    safe_mode: true                       # Chỉ quét cổng phổ biến (21,22,23,80,443,8080,8888,3389,5900)
+    top_ports: 20
+
+honeytokens:
+  enabled: true
+  callback_url: "https://canarytokens.org/generate" # Hoặc webhook riêng của bạn
+  decoy_files:
+    - path: "/home/root/.aws/credentials"
+      description: "Fake AWS Access Key có nhúng Webhook Beacon"
+    - path: "/root/.bash_history"
+      description: "Chứa lịch sử curl bí mật đến tracking server"
+    - path: "/var/backups/db_dump_passwords.txt"
+      description: "Canary URL nhử hacker mở trình duyệt tải về"
+
+# Quy tắc SOAR (Automated Incident Response)
+soar_rules:
+  # Quy tắc 1: Phát hiện Brute-force mật khẩu (MITRE ATT&CK T1110)
+  brute_force:
+    threshold_attempts: 5                 # Quá 5 lần login sai
+    time_window_sec: 60                   # Trong vòng 60 giây
+    action: "tarpit_and_alert"            # Hành động: giam lỏng + cảnh báo
+
+  # Quy tắc 2: Đăng nhập thành công vào Honeypot (MITRE ATT&CK T1078)
+  successful_login:
+    action: "reverse_recon_and_monitor"   # Trinh sát ngược tức thì + kích hoạt bẫy
+
+  # Quy tắc 3: Tải mã độc lên máy bẫy (MITRE ATT&CK T1105)
+  payload_dropped:
+    action: "quarantine_and_scan"         # Tự động cách ly, tính SHA256, tra cứu VT
+
+  # Quy tắc 4: Tự động chặn Firewall (iptables / nftables)
+  firewall_enforcement:
+    auto_block: true
+    block_duration_sec: 3600              # Chặn 1 giờ
+    whitelist:
+      - "127.0.0.1"
+      - "192.168.1.1"
+
+# Cấu hình Mạng Bẫy Mồi Phân Tán (Distributed Honeynet Architecture)
+distributed_honeynet:
+  enabled: true
+  collector_host: "0.0.0.0"
+  collector_port: 9090
+  shared_secret: "honeynet_cluster_secret_token_2026"
+  sensor_nodes:
+    - node_id: "sensor-dmz-01"
+      subnet: "192.168.10.0/24"
+      location: "DMZ Public Facing Network"
+      node_type: "SSH_HIGH_INTERACTION"
+    - node_id: "sensor-cloud-aws-02"
+      subnet: "172.31.0.0/16"
+      location: "AWS VPC Production Subnet"
+      node_type: "CANARY_WEB_TRAP"
+    - node_id: "sensor-internal-lan-03"
+      subnet: "10.10.50.0/24"
+      location: "Internal Enterprise Office LAN"
+      node_type: "SSH_HONEYPOT_BAIT"

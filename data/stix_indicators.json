@@ -1,0 +1,546 @@
+[
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1791783129",
+    "created": "2026-10-12T05:32:09Z",
+    "modified": "2026-10-12T05:32:09Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-12T05:32:09Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1791783149",
+    "created": "2026-10-12T05:32:29Z",
+    "modified": "2026-10-12T05:32:29Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-12T05:32:29Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1791783157",
+    "created": "2026-10-12T05:32:37Z",
+    "modified": "2026-10-12T05:32:37Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-12T05:32:37Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1791783173",
+    "created": "2026-10-12T05:32:53Z",
+    "modified": "2026-10-12T05:32:53Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-12T05:32:53Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792075620",
+    "created": "2026-10-15T14:47:00Z",
+    "modified": "2026-10-15T14:47:00Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T14:47:00Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792075969",
+    "created": "2026-10-15T14:52:49Z",
+    "modified": "2026-10-15T14:52:49Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T14:52:49Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1792075982",
+    "created": "2026-10-15T14:53:02Z",
+    "modified": "2026-10-15T14:53:02Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T14:53:02Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1792075997",
+    "created": "2026-10-15T14:53:17Z",
+    "modified": "2026-10-15T14:53:17Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T14:53:17Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792077140",
+    "created": "2026-10-15T15:12:20Z",
+    "modified": "2026-10-15T15:12:20Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T15:12:20Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792078669",
+    "created": "2026-10-15T15:37:49Z",
+    "modified": "2026-10-15T15:37:49Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T15:37:49Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792078708",
+    "created": "2026-10-15T15:38:28Z",
+    "modified": "2026-10-15T15:38:28Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-15T15:38:28Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1792236055",
+    "created": "2026-10-17T11:20:55Z",
+    "modified": "2026-10-17T11:20:55Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-10-17T11:20:55Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683004",
+    "created": "2026-11-03T05:16:44Z",
+    "modified": "2026-11-03T05:16:44Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:16:44Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683020",
+    "created": "2026-11-03T05:17:00Z",
+    "modified": "2026-11-03T05:17:00Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:17:00Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683274",
+    "created": "2026-11-03T05:21:14Z",
+    "modified": "2026-11-03T05:21:14Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:21:14Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683290",
+    "created": "2026-11-03T05:21:30Z",
+    "modified": "2026-11-03T05:21:30Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:21:30Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683402",
+    "created": "2026-11-03T05:23:22Z",
+    "modified": "2026-11-03T05:23:22Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:23:22Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683417",
+    "created": "2026-11-03T05:23:37Z",
+    "modified": "2026-11-03T05:23:37Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:23:37Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--172-19-0-1-1793683455",
+    "created": "2026-11-03T05:24:15Z",
+    "modified": "2026-11-03T05:24:15Z",
+    "name": "Honeynet Detected Malicious IP: 172.19.0.1",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '172.19.0.1']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:24:15Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683702",
+    "created": "2026-11-03T05:28:22Z",
+    "modified": "2026-11-03T05:28:22Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:28:22Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793683718",
+    "created": "2026-11-03T05:28:38Z",
+    "modified": "2026-11-03T05:28:38Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:28:38Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793685347",
+    "created": "2026-11-03T05:55:47Z",
+    "modified": "2026-11-03T05:55:47Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T05:55:47Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793685651",
+    "created": "2026-11-03T06:00:51Z",
+    "modified": "2026-11-03T06:00:51Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:00:51Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793685667",
+    "created": "2026-11-03T06:01:07Z",
+    "modified": "2026-11-03T06:01:07Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:01:07Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793685773",
+    "created": "2026-11-03T06:02:53Z",
+    "modified": "2026-11-03T06:02:53Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:02:53Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793685977",
+    "created": "2026-11-03T06:06:17Z",
+    "modified": "2026-11-03T06:06:17Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:06:17Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--185-220-101-5-1793685993",
+    "created": "2026-11-03T06:06:33Z",
+    "modified": "2026-11-03T06:06:33Z",
+    "name": "Honeynet Detected Malicious IP: 185.220.101.5",
+    "description": "IP identified by Mini-SOC Deception: Automated Brute Force Mitigation",
+    "pattern": "[ipv4-addr:value = '185.220.101.5']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:06:33Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793686039",
+    "created": "2026-11-03T06:07:19Z",
+    "modified": "2026-11-03T06:07:19Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:07:19Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793686172",
+    "created": "2026-11-03T06:09:32Z",
+    "modified": "2026-11-03T06:09:32Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-03T06:09:32Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793753085",
+    "created": "2026-11-04T00:44:45Z",
+    "modified": "2026-11-04T00:44:45Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-04T00:44:45Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793753146",
+    "created": "2026-11-04T00:45:46Z",
+    "modified": "2026-11-04T00:45:46Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-04T00:45:46Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793753188",
+    "created": "2026-11-04T00:46:28Z",
+    "modified": "2026-11-04T00:46:28Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-04T00:46:28Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793753216",
+    "created": "2026-11-04T00:46:56Z",
+    "modified": "2026-11-04T00:46:56Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-04T00:46:56Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  },
+  {
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--198-51-100-25-1793794196",
+    "created": "2026-11-04T12:09:56Z",
+    "modified": "2026-11-04T12:09:56Z",
+    "name": "Honeynet Detected Malicious IP: 198.51.100.25",
+    "description": "IP identified by Mini-SOC Deception: Brute Force",
+    "pattern": "[ipv4-addr:value = '198.51.100.25']",
+    "pattern_type": "stix",
+    "valid_from": "2026-11-04T12:09:56Z",
+    "labels": [
+      "malicious-activity",
+      "honeypot-detected"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.key
+.env
+.venv
+venv/
+ENV/
+.pytest_cache/
+data/quarantine/
+# Log tam cua tunnel (serveo/pinggy) - chua endpoint cong khai, khong commit
+.sv.out
+.sv.err
+.pg.log
+.pgtun.out
+.pgtun.err
+.tun.out.log
+.tun.err.log
+.lh.out.log
+.lh.err.log
+.main.log
